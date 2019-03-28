@@ -8,7 +8,7 @@
     <!-- Material Design icon font -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
-<body style="overflow:hidden">
+<body style="overflow:hidden" id="body">
   <style>*{position:relative;transition: all 0.4s ease !important}img{position:absolute !important;opacity:0;transition: all 1s ease !important}
   .tx{opacity:0}.tx2{opacity:0}
   </style>
@@ -46,7 +46,7 @@
 </label></span></span>
   </div>
 <script>
-document.addEventListener("scroll", function(){
+document.getElementById("body").addEventListener("scroll", function(){
 console.log("scroll");
 });
 wallpapers = ["http://gunvolt.com/en/GV1/images/GVohanami_16_9US.jpg","http://gunvolt.com/en/GV1/images/GVspring_16_9US.jpg","http://gunvolt.com/en/GV2/special/img/wall_hanami2017_16_9.jpg",
