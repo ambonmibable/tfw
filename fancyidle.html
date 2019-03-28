@@ -100,8 +100,7 @@ document.getElementById("bBlur").checked = true;
 if (localStorage.getItem("blur") == "false"){
       document.getElementById("i1").style.filter=null
       document.getElementById("i2").style.filter=null
-      document.getElementById("i3").style.filter=null
-	document.getElementById("bBlur").checked = null
+	document.getElementById("bBlur").checked = false
 	switchbut(1)
 }
 
@@ -112,12 +111,10 @@ function switchbut(buttt){
 	    localStorage.setItem("blur", "false");
       document.getElementById("i1").style.filter=null
       document.getElementById("i2").style.filter=null
-      document.getElementById("i3").style.filter=null
     } else{
 	    localStorage.setItem("blur", "true");
       document.getElementById("i1").style.filter="blur(15px)"
       document.getElementById("i2").style.filter="blur(15px)"
-      document.getElementById("i3").style.filter="blur(15px)"
     }
   }
 }
