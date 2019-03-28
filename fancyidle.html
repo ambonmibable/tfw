@@ -88,14 +88,20 @@ if (getParameterByName("subtx")){
 document.getElementById("subbg").innerHTML = getParameterByName("subtx");
 document.getElementById("subtitle").innerHTML = getParameterByName("subtx");}
 document.getElementById("bBlur").checked = true;
-
+if (document.cookie =="blur=false;"){
+      document.getElementById("i1").style.filter=null
+      document.getElementById("i2").style.filter=null
+      document.getElementById("i3").style.filter=null
+}
 function switchbut(buttt){
   if (buttt==1){
     if (!document.getElementById("bBlur").checked){
+	    document.cookie =="blur=false;"
       document.getElementById("i1").style.filter=null
       document.getElementById("i2").style.filter=null
       document.getElementById("i3").style.filter=null
     } else{
+	    document.cookie =="blur=true;"
       document.getElementById("i1").style.filter="blur(15px)"
       document.getElementById("i2").style.filter="blur(15px)"
       document.getElementById("i3").style.filter="blur(15px)"
