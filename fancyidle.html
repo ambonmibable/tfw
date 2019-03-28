@@ -8,24 +8,102 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body style="overflow:hidden">
-  <style>*{position:relative !important;transition: all 0.4s ease !important}img{position:absolute !important;opacity:0;transition: all 1s ease !important}
+  <style>*{position:relative;transition: all 0.4s ease !important}img{position:absolute !important;opacity:0;transition: all 1s ease !important}
   .tx{opacity:0}.tx2{opacity:0}
   </style>
-  <div style="text-align:center;vetical-align:middle"><img id="i1"src="http://gunvolt.com/en/GV1/images/GVohanami_16_9US.jpg" style="width:110%;filter:blur(15px);position:static;top:-7%;left:-5%;z-index:-500"></img>
-  <img  id="i2"src="http://gunvolt.com/en/GV1/images/GVspring_16_9US.jpg" style="width:110%;filter:blur(15px);position:static;top:-5%;left:-5%;z-index:-500"></img>
-  <img  id="i3"src="http://gunvolt.com/en/GV2/special/img/wall_hanami2017_16_9.jpg" style="width:110%;filter:blur(15px);position:static;top:-5%;left:-5%;z-index:-500"></img></div>
-  <div><button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" onclick="clickerr()" style="position:relative;left:20px;top:20px">
-    <i class="material-icons" style="position:relative;left:12px;top:22px">archive</i>
-  </button><button class="mdl-button--mini-fab mdl-button--fab mdl-js-ripple-effect mdl-button--colored" onclick="mt()" style="position:static;left:-40px;bottom:-40px">
-    <i class="material-icons" style="position:relative;left:12px;top:15px">queue_music</i>
-  </button><h4 style="position:relative;top:-55px;left:81px;font-family:Roboto;filter:blur(2px);font-weight:1000">Tanner's False Wallpaper</h4>
-  <h4 style="position:relative;top:-112px;left:80px;font-family:Roboto;color:#fff;font-weight:1000">Tanner's False Wallpaper</h4>
-  <h4 style="position:relative;top:-148px;left:83px;font-family:Roboto;filter:blur(2px);font-weight:1000;font-size:18px">Totally Cool</h4>
-  <h4 style="position:relative;top:-205px;left:82px;font-family:Roboto;color:#fff;font-weight:1000;font-size:18px">Totally Cool</h4>
+  <div style="text-align:center;vetical-align:middle"><img id="i1"src="http://gunvolt.com/en/GV1/images/GVohanami_16_9US.jpg" style="width:110%;filter:blur(15px);position:fixed;top:-9%;left:-5%;z-index:-500"></img>
+  <img  id="i2"src="http://gunvolt.com/en/GV1/images/GVspring_16_9US.jpg" style="width:110%;filter:blur(15px);position:fixed;top:-9%;left:-5%;z-index:-500"></img></div>
+  <div><button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="aa" onclick="clickerr()" style="position:relative;left:20px;top:20px">
+    <i class="material-icons">archive</i>
+  </button><button class="mdl-button--mini-fab mdl-button--fab mdl-js-ripple-effect mdl-button--colored" onclick="mt()" style="position:relative;left:-40px;bottom:-40px;display:none">
+    <i class="material-icons">queue_music</i>
+  </button><h4 style="position:relative;top:-55px;left:81px;font-family:Roboto;filter:blur(2px);font-weight:1000" id="topbg">Tanner's False Wallpaper</h4>
+  <h4 style="position:relative;top:-112px;left:80px;font-family:Roboto;color:#fff;font-weight:1000" id="toptitle">Tanner's False Wallpaper</h4>
+  <h4 style="position:relative;top:-148px;left:83px;font-family:Roboto;filter:blur(2px);font-weight:1000;font-size:18px" id="subbg">Totally Cool</h4>
+  <h4 style="position:relative;top:-205px;left:82px;font-family:Roboto;color:#fff;font-weight:1000;font-size:18px" id="subtitle">Totally Cool</h4>
   </div><audio id="audio" controls loop style="opacity:0"><source src="http://66.90.93.122/ost/azure-striker-gunvolt/wddeovke/Phosphorescent%20Dance.mp3" type="audio/mp3"></audio><audio id="audio2" controls loop style="opacity:0"><source src="http://66.90.93.122/ost/azure-striker-gunvolt/sawguxrz/Beginning%20of%20a%20Long%20Night.mp3" type="audio/mp3"></audio>
-  
-    
+  <div style="position:absolute !important;bottom:10px;left:10px;" id = "chips"><a href='#nt' target="_blank" style="padding-right:10px"><button class="mdl-chip mdl-chip--contact mdl-js-ripple-effect" >
+    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white"><i class="material-icons" style="position:relative;left:-1px;top:4px">add_circle</i></span>
+    <span class="mdl-chip__text">New Tab</span></button></a><a href='https://docs.google.com' target="_blank" style="padding-right:10px"><button class="mdl-chip mdl-chip--contact mdl-js-ripple-effect" >
+      <span class="mdl-chip__contact mdl-color--blue mdl-color-text--white"><i class="material-icons" style="position:relative;left:-1px;top:4px">library_books</i></span>
+      <span class="mdl-chip__text">Google Docs</span></button></a>
+      <a href='https://www.youtube.com' target="_blank" style="padding-right:10px"><button class="mdl-chip mdl-chip--contact mdl-js-ripple-effect" >
+        <span id="yt" class="mdl-chip__contact mdl-color-text--white" style="background-color:#f00"><svg style="width:24px;height:24px;position:relative;top:-1px" viewBox="0 0 24 24">
+    <path fill="#fff" d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z" />
+</svg></span>
+        <span class="mdl-chip__text">Youtube</span></button></a>
+        <a href='https://www.google.com' target="_blank" style="padding-right:10px"><button class="mdl-chip mdl-chip--contact mdl-js-ripple-effect" >
+          <span id="yt" class="mdl-chip__contact mdl-color-text--white" style="background-color:#0a0"><svg style="width:24px;height:24px;top:-1px" viewBox="0 0 24 24">
+    <path fill="#fff" d="M21.35,11.1H12.18V13.83H18.69C18.36,17.64 15.19,19.27 12.19,19.27C8.36,19.27 5,16.25 5,12C5,7.9 8.2,4.73 12.2,4.73C15.29,4.73 17.1,6.7 17.1,6.7L19,4.72C19,4.72 16.56,2 12.1,2C6.42,2 2.03,6.8 2.03,12C2.03,17.05 6.16,22 12.25,22C17.6,22 21.5,18.33 21.5,12.91C21.5,11.76 21.35,11.1 21.35,11.1V11.1Z" />
+</svg></span>
+          <span class="mdl-chip__text">Google</span></button></a>
+        <span class="mdl-chip mdl-chip--contact mdl-js-ripple-effect" >
+          <span id="yt" class="mdl-chip__contact mdl-color-text--white" style="background-color:#aaa"><i class="material-icons" style="position:relative;left:-1px;top:4px">settings</i></span>
+          <span class="mdl-chip__text">Background Blur <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="bBlur" style='position:relative;top:-1px;padding-right:5px' onclick="switchbut(1)">
+  <input type="checkbox" id="bBlur" class="mdl-switch__input" checked>
+  <span class="mdl-switch__label"></span>
+</label></span></span>
+  </div>
+
 <script>
+wallpapers = ["http://gunvolt.com/en/GV1/images/GVohanami_16_9US.jpg","http://gunvolt.com/en/GV1/images/GVspring_16_9US.jpg","http://gunvolt.com/en/GV2/special/img/wall_hanami2017_16_9.jpg",
+"https://www.wallpaperup.com/uploads/wallpapers/2013/12/02/182291/76c5aef80966af99c675d0cfe5ffd13c-1000.jpg"];
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+show = true
+document.addEventListener("keydown", event => {
+  if (event.keyCode == 77) {
+    if (show == true) {
+      show = false
+document.getElementById("aa").style.opacity=0
+document.getElementById("topbg").style.opacity=0
+document.getElementById("toptitle").style.opacity=0
+document.getElementById("subbg").style.opacity=0
+document.getElementById("subtitle").style.opacity=0
+document.getElementById("chips").style.opacity=0
+} else{
+  show=true
+document.getElementById("aa").style.opacity=1
+document.getElementById("topbg").style.opacity=1
+document.getElementById("toptitle").style.opacity=1
+document.getElementById("subbg").style.opacity=1
+document.getElementById("subtitle").style.opacity=1
+document.getElementById("chips").style.opacity=1
+}
+  }
+  // do something
+});
+if (getParameterByName("toptx")){
+document.getElementById("topbg").innerHTML = getParameterByName("toptx");
+document.getElementById("toptitle").innerHTML = getParameterByName("toptx");}
+if (getParameterByName("subtx")){
+document.getElementById("subbg").innerHTML = getParameterByName("subtx");
+document.getElementById("subtitle").innerHTML = getParameterByName("subtx");}
+document.getElementById("bBlur").checked = true;
+
+function switchbut(buttt){
+  if (buttt==1){
+    if (!document.getElementById("bBlur").checked){
+      document.getElementById("i1").style.filter=null
+      document.getElementById("i2").style.filter=null
+      document.getElementById("i3").style.filter=null
+    } else{
+      document.getElementById("i1").style.filter="blur(15px)"
+      document.getElementById("i2").style.filter="blur(15px)"
+      document.getElementById("i3").style.filter="blur(15px)"
+    }
+  }
+}
+function round(num){
+  if (num-Math.floor(num)>=0.5){return Math.ceil(num)} else{return Math.floor(num)}
+}
 function mt(){
 		if(document.getElementById("audio").style.opacity<0.3){document.getElementById("audio").style.opacity=1;
 			document.getElementById("audio2").style.opacity=1
@@ -34,14 +112,15 @@ function mt(){
 			document.getElementById("audio2").style.opacity=0}
 };
 function clickerr(){
-    document.getElementById("i1").style.opacity = 0;
-    document.getElementById("i2").style.opacity = 0;
-    document.getElementById("i3").style.opacity = 0;
-  if (Math.random()*2 <=1){
+  wall = round(Math.random()*(wallpapers.length-1));
+  if (document.getElementById("i1").style.opacity == 0){
+    document.getElementById("i1").src= wallpapers[wall];
     document.getElementById("i1").style.opacity = 1;
-  }else if (Math.random()*2 <=1){
-    document.getElementById("i2").style.opacity = 1;}else{
-    document.getElementById("i3").style.opacity = 1;}
+      document.getElementById("i2").style.opacity = 0;
+  }else{
+    document.getElementById("i2").src= wallpapers[wall];
+    document.getElementById("i1").style.opacity = 0;
+    document.getElementById("i2").style.opacity = 1;}
 } clickerr()
   </script>
   </body>
