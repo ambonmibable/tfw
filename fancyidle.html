@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html>
+	<script
+			  src="http://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
 <head>
 	<title>Fancy Wall</title>
     <!-- Material Design Lite -->
@@ -93,22 +97,24 @@ if (getParameterByName("subtx")){
 document.getElementById("subbg").innerHTML = getParameterByName("subtx");
 document.getElementById("subtitle").innerHTML = getParameterByName("subtx");}
 document.getElementById("bBlur").checked = true;
-if (read_cookie("blur") == false){
+if (localStorage.getItem("blur") == "false"){
       document.getElementById("i1").style.filter=null
       document.getElementById("i2").style.filter=null
       document.getElementById("i3").style.filter=null
 	document.getElementById("bBlur").checked = null
 	switchbut(1)
 }
+
+console.log(localStorage.getItem("favoriteVillan"));
 function switchbut(buttt){
   if (buttt==1){
     if (!document.getElementById("bBlur").checked){
-	    document.cookie ="blur=false;"
+	    localStorage.setItem("blur", "false");
       document.getElementById("i1").style.filter=null
       document.getElementById("i2").style.filter=null
       document.getElementById("i3").style.filter=null
     } else{
-	    document.cookie ="blur=true;"
+	    localStorage.setItem("blur", "true");
       document.getElementById("i1").style.filter="blur(15px)"
       document.getElementById("i2").style.filter="blur(15px)"
       document.getElementById("i3").style.filter="blur(15px)"
