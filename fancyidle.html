@@ -81,6 +81,11 @@ document.getElementById("chips").style.opacity=1
   }
   // do something
 });
+function read_cookie(key)
+{
+var result;
+return (result = new RegExp('(?:^|; )' + encodeURIComponent(key) + '=([^;]*)').exec(document.cookie)) ? (result[1]) : null;
+}
 if (getParameterByName("toptx")){
 document.getElementById("topbg").innerHTML = getParameterByName("toptx");
 document.getElementById("toptitle").innerHTML = getParameterByName("toptx");}
@@ -88,7 +93,7 @@ if (getParameterByName("subtx")){
 document.getElementById("subbg").innerHTML = getParameterByName("subtx");
 document.getElementById("subtitle").innerHTML = getParameterByName("subtx");}
 document.getElementById("bBlur").checked = true;
-if (document.cookie =="blur=false;"){
+if (read_cookie("blur") == false){
       document.getElementById("i1").style.filter=null
       document.getElementById("i2").style.filter=null
       document.getElementById("i3").style.filter=null
