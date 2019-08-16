@@ -116,13 +116,6 @@ function switchbut(buttt){
 function round(num){
   if (num-Math.floor(num)>=0.5){return Math.ceil(num)} else{return Math.floor(num)}
 }
-function mt(){
-		if(document.getElementById("audio").style.opacity<0.3){document.getElementById("audio").style.opacity=1;
-			document.getElementById("audio2").style.opacity=1
-		}else
-		{document.getElementById("audio").style.opacity=0;
-			document.getElementById("audio2").style.opacity=0}
-};
 function clickerr(){
   wall = round(Math.random()*(wallpapers.length-1));
   if (document.getElementById("i1").style.opacity == 0){
